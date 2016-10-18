@@ -3,6 +3,7 @@ class RelationProperties {
      * Assuming that a two column array containing the relation and a one column          * array containing the set the relation is on is given in each method. 
      * No checks are performed.
      */
+    //Useful help methods
 	private static int indexOf(char c, char[] set){
 		int index = -1;
 		for (int i = 0;  i++ < set.length;) {
@@ -24,7 +25,7 @@ class RelationProperties {
 		}
 		return false;
 	}
-	/**
+	 /**
 	 * A relation is reflexive if every node has a loop
 	 * @param relation The current relation
 	 * @param set The set of elements in relation
@@ -40,13 +41,11 @@ class RelationProperties {
 		}
 		return ctr == set.length;
     }
-
+	//It's symmetric if for all {a,b} we have a counterpart {b,azz}
     public static boolean isSymmetric(char[][] relation, char [] set){
-    	//boolean hasNoPartner = true;
 		int amtOneway = 0;
 		int amtBack = 0;
 		for (int i = 0; i < relation.length;i++) {
-			//hasNoPartner = true;
 			char[] curr = relation[i];
 			if(curr[0] != curr[1]){
 				amtOneway++;
@@ -54,13 +53,13 @@ class RelationProperties {
 					if(relation[j][0] != relation[j][1]) {
 						//If two nodes have edges going both ways, it's symmetric
 						if(curr[0] == relation[j][1] && curr[1] == relation[j][0]){
-							//hasNoPartner = false;
 							amtBack++;
 						}
 					}
 				}
 			}
 		}
+		//If we have same amt of edges one way as amt of edges the other way, we have symmetry
 		return amtBack == amtOneway;
     }
     //char[] setA = {'a','x','r','m','2','0'};
@@ -95,6 +94,7 @@ class RelationProperties {
 				}
 			}
 		}
+		//If a rel is symmetric, it must also be reflexive
 		if(isSymmetric(relation, set)) {
 			return isReflexive(relation, set) && transitive;
 		}
@@ -110,7 +110,7 @@ class RelationProperties {
 					if(relation[j][0] != relation[j][1]) {
 						//If two nodes have edges going both ways, it's symmetric
 						if(curr[0] == relation[j][1] && curr[1] == relation[j][0]){
-							//We only need to find one symmetry
+							//We only need to find one symmetry to conclude that it isn't antiSymmetric
 							return false;
 						}
 					}
