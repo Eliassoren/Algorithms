@@ -1,0 +1,48 @@
+/**
+ * Created by EliasBrattli on 10/09/2016.
+ * Oppgave 1
+ */
+@SuppressWarnings("unchecked")
+public class CircleList<E>{
+    private Node head;
+    private int size = 0;
+    @SuppressWarnings("unchecked")
+    public int getSize(){
+        return size;
+    }
+    @SuppressWarnings("unchecked")
+    public Node getHead() {
+        return head;
+    }
+    @SuppressWarnings("unchecked")
+    public void add(E val){
+        Node newNode = new Node(val,null,null);
+        if(head != null){
+            head.setPrev(new Node(val,head,head.getPrev()));
+            head.getPrev().getPrev().setNext(head.getPrev());
+        }
+        else {
+            head = newNode;
+            head.setPrev(head);
+            head.setNext(head);
+        }
+        size++;
+    }
+    @SuppressWarnings("unchecked")
+    public Node remove(Node node){
+        if(node.getPrev() != null){
+            node.getPrev().setNext(node.getNext());
+        }else{
+            head = node.getNext();
+        }
+        if (node.getNext() != null){
+            node.getNext().setPrev(node.getPrev());
+        }else{
+            head.setPrev(node.getPrev());
+        }
+        node.setPrev(null);
+        node.setNext(null);
+        size--;
+        return node;
+    }
+}
