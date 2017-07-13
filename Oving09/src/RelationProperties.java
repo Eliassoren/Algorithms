@@ -70,6 +70,7 @@ class RelationProperties {
 			transitive = true;
 			char x1 = relation[i][0];
 			char y1 = relation[i][1];
+			//
 			if(x1 != y1){
 				for (int j = 0; j < relation.length; j++) {
 					char y2 = relation[j][0];
