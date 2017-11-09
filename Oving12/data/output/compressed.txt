@@ -1,0 +1,211 @@
+ÃÃ˜ving 12 algoritmer og datastrukturer
+
+Innholdsfortegnelse
+
+'=<ülednhø
+TestfildIù kompriróKrav til lÃ¸s-àen
+Deloppgave Lempel-Ziv
+Tips omÿzıFilQımat3öHuffmankod{6$ùndata sUùtrengs Næ Ã¥ pakke ut igjen
+AdaptivZ[ùOm bits;øer
+JavatnEñbegge deloppgavûNoen øeeksempl2õ
+
+  InnlednPã
+Lag et program som kan lese =öfil og lagókomprimert utdı. 
+BıannHúpakker)ü igjLHüskapõ
+originalenEû
+BrukqÿttôHuffmankodin[şllEäLempel-Ziv for Ã¥ komprimere?îRessurssterke grupcümed Iÿgõode program3üre mD÷gjerne la#ü
+beg*ıdelodüoppnköbest muligvöesjon. I sDöfall 
+anbe
+uıjeg;Tùseparat{ÿ,bÿtyıÃ¸r
+ıenkqÿenş
+thüe og#ÿl4zûarbei1ô. Da gÃ¥r an^Ûsjekke hvilken algoritme 
+som komprimWır bTÿ,Tpÿrsü fordu
+,Ò output 
+fra Lempel-Ziv med Huffmann.
+
+Program^ÿ lôÂ«zipÂ» bruk\8daù, og 
+dkştt>Tøkoding p,öoutput fraItÚDet kan bli en del arbeid, da hÃ¥ndterFğav bits & bytes hönytt 
+for nüge. Nıder÷denne Ã¸v?\ütell5şli5ımer}÷  TestfilLFúkompripÊ
+
+OppgavetekstÂ (pdf) http://www.iie.ntnu.no/fag/_alg/Bù/opg12.1Eıtxt.E1Eşex/Eïex
+
+ForelesningenFıpdf(Fødiverse.3Hıtxt0H3Hılyx0H3î
+
+
+
+  Krav til lÃ¸Rï
+
+1. Implementer ğn Lempel-Ziv ellõHuffmannkod8ü. (Eî
+  begge deler, om
+úre hariùd!) Andøalgoritma÷blir ikke=ûgodkjyú medmi+üdet qÛavtalt pÃ¥ forhÃ¥nd. Lempel-Ziv-WelshCû(LZW)2úen annmø.
+
+2. DeVÿmHÍlage programmene selv, ikke noe Â«cut & pasteÂ» fraaónettet. Grupphısom4ökan forklaaúdetaljÿi
+cÿt?÷sitt, fÃ¥jøgodkjent2ñnne oppgaven. D0_ömye Ã¥ lÃ¦VşavFügjÃ¸fùen slik6û, somZdùmed segñÂ«cut & pasteÂ»G÷. BÃ¥de n+ÿdqûgjeldvöalgoritmenUüog g	àrell programmering. 
+
+3. Innpakk+şutëskal vÃ¦re separate fVùtstÃ¥enxş
+ Qú. Det }æikke greit Ã¥ ha ett samle~ø som bÃ¥BügjÃ¸5şnnxûog utUü to 	gïne kan imidlertidCábenytte seg av felles klasser, nûdet pù.
+
+4. PPømÃ¥ lesey÷skrive fi]ú. Altsîikke bare testdatauøi en tabmTò5. Utpakkingsp^ÿt]üduse@2[ì som er identisk medRóoriginalen. M]ÿd@øskal ikk|ürengøilgang pY1Tıen,CşbafWô komprimertesSú
+
+6. KÿiCÿmCøkunne laZ65ô som er mindWıenncurBĞlt i antall bytes. Operativsystemet kan fortelleCøhvor stoUgşen|ır.
+\åDeloppgave Lempel-Ziv
+
+ImplIônter en varirı av&å datakompresjon. 
+
+Finn ut oïmye programmet de(ÿ 0şimîr forskjellige typlå
+store filer. (f.eks. ren t
+ıt,  ÿtîbehandlingsdokumen û
+pdf-?ø e.l.) DyWúikke s=ıallbrêlar seg 
+komprimere. Mqøfor Ã¥ fûgodkj_ÿm÷ruppa i d]ôminste kunneDÿ BşstCûtekstnş sMÿdXÿtq6ÿd$ïplass â€“ og pakkC#ûut igq6û. 
+
+Gtúdessut_túforklaqûdetal5ôe i programm×sine.
+
+  Tips om Lempel-ziv
+
+Normalt blirBç veldig lite kompresjon pyÿs~ôfiler. Bitteÿ
+ğ kan brukes for *ÿn~êfeil i programmet, men$ıteshÿ
+iübÃ¸reğne minst vÃ¦re p|şno:íkilobyte.
+
+Det blirüavgj=üelse\ğa, som f.eks. hvsülang4üakov%÷
+programmHíderes skal lete ettGırepÿrúsekven[ú. Zippc'úr
+32kBQÿ,Fót fins ogsÃ¥ eüsjonkõsom gÃ¥r 640ıtil3÷e. Hvis 
+|ó lar programmF-bşngi.û, vilbùbli treïe men 
+sannsynligPùkomprimUıbed[õogsÃ¥.
+
+Om .Fıha dôveldig kjapt|û, kanfğlÃ¸nne seg Ã¥ la
+ù
+inspirzşavèanserte tekstsÃ¸kalgorit~ï. 
+
+  Filformat
+
+	ù bestem$iÿrcûlv. Dt|/"ûli endûveiinxîmellom hvor kompliyù prograKıt s|ö vÃ¦re, og*ügodtdıt 
+9ırimtü.
+
+D`	îte fila kan bestÃ¥|ò blokker. Hverü sta.ùr med 
+Cûbyte-ødi, som )pütall#şllô-128 og +127Kşis&Uâ
+negativt, f.eks. -57, betyr dJşatWùn serie{ıtegp÷
+ikke lotğg komprimere. (IAıte Wúempeleeş57;ó). 
+
+Hvis tal`ùpositiv%üangi~ûlengdyüpÃ¥ Şrepetert 
+sekvens. De neste 1, 2 eMúr 4 byTZıheld÷ som fort#ù
+hvor ljùt bakov7úi filaxünne a|Q~şfiö. Med 1â€¯aş
+(hÿ)iÿdjöbare mulig1ÿg5ø127 tegncö. Programm/ólir 
+raskt, mi÷komprimerrúantageKúikke sQïkraftig. Med 2â€¯}÷ 
+(short)pır dXşan÷opp til 3.ökB bakovernòvi bruker 
+alta/ùekstra ^lÿ4lı(iniÿka=a`üGB 
+aâ. Det gir mange flere mulighetrüfor q÷finne rep`ÿ
+yÿe1õr, men bruk-ıogskÿm7éplass. Et program som lSìopptil 
+2â€¯GB bakovIèblir sannsynligvis temmeÿ nşgt`ê. Det kan 
+lÃ¸nne seg xíbegrense littâ€¦
+
+ +ÿloègave Huffmankoding
+
+Lag Häprogram som leser inn en filpø genererÿhCéntre 
+ut fra byte-verdi*ş i8ûen. D6şttOübrukVhÿmsÿ
+Gÿti÷Ã¥ skrivezökomprimert	qıkod9[ñ. PrÃ¸v 
+f.eks.9	/=$ãorelesningsnotat, eller kildeHÿnr÷
+programmXÿd<ös.
+
+KlarteYıspaTöplass? Form÷pakke ut Güslik
+~{Wÿm9õman ha huffüntreeuôgjengelig. IüleggE÷e 
+data, HQFïa nok informasjon3gúkunne Uüskap:ÿHqpò. F.eks. frekv#ütaberñn. Sparer dere UÙtsatt 
+plass, nÃ¥r vi tar stÃ¸rrelsen pqûslik Uûtrain:ñmasjon med i 
+bPïgningen?
+
+Lag ogs6îet program som les}ïn komprimerte fileùog pakk ó
+ut.
+
+  Tips :öHuffmankodeûndata\õtrengs for yKñ ut igjen
+
+Det {ÿiönÃ¸dvendig*ùlagre hOFûet, d/ühold3	#û
+frek8óstabellen. Uthÿixøprogrammgıkan@ğrmed bygge opp sş 
+_ù ut fraN÷ene. 
+
+inğr[256];
+
+En slik	-{ç blir alltid 1â€¯kB, file.Êom skal 
+komprimeres mÃ¥ dermed vÃ¦re stor nok til at 	-ıingFùparer 
+>ü enndè.
+
+  Adaptiv Huffmannkod4ı
+
+M\ÿaÿhú slippO/á Ã¥ lagre frekvensene ogsÃ¥. 
+M!ıdelzğfila opp i blokk>aîfast stÃ¸rrelse. Fıste%õ 
+komprimernÿi:ÿ,Sün batükopiås til output. Samtidig 
+lagh8ùet huffCıntrgşNe
+e
+dùs med 
+*8öfra forrig1÷, og slikûtsetteÿdbçgjennom 
+fila.
+
+  Om bitssønger
+
+En
+ÿ 6øikke en ÿs=Iïte: "00001101". Dc/*û
+teksBímed 8â€¯tegn. SkrivUşviEü til]÷fil, gÃ¥r\4ÿ
+5øbyte, og0üoppn!åikke noe datakompresjon.
+
+M|şbiyUõ0b00001101 sYòsamme som talljş13_økan 
+lagKşÃ©J|UÿDfıtyp[øÂ«longÂ»MúpÃ¥ 64nı. Im÷tegn vil ~ş lër 
+Huffmankode enn de3ş(D|uıvissüat nQ'ö komprimeretÿfQÿ
+mú2.7GB,]ır i
+tZûs med4ìn 44 bit.) Â«longÂ» 2ü
+der%3|ÿtXrûlagre-ÿsYõ.
+
+Ã… skriv1øfil, blifù del ek8òa arbeid. JavaSlúoss ba[Jıhelgõyte, og for}ıvÃ¦}úeffektoúÃ¸r vi9ÿ
+:5÷-array avxşvi\şst,Órelse. Men, med 
+hÃ¸yre/venstreskift samt binlÿ&~î| -operasjoner, kaU÷ fÃ¥ 
+vÃ¥|ıbitAônger inn i eDñyte-array som s/:æskrives til disk. 
+
+TilsvaAïde for lesing: ViUSö, og plukksù
+derett}úut Ã©nıbitOzûnavig&İ gjennom huffmanntreet.
+
+  Javatips3ébegge deloppgaver
+
+
+---0í
+  Datatype    bitsşytıminúmax  
+22ÿ
+~übyteÿ8vÿ1~û  -12"!û127  LûshortDÿ6Uÿ2Lø-32â€¯76NPû char#Psÿ0jş65gı535Nıint
+h{ÿ4Nõ-2147483648h	ÿ7Lülongÿ6E2í-922337203685477580LLı---0ë
+
+
+Programmer som les
+úÃ©n ogÕbyte fra fil, blir alltid trege i 
+Java. Fo8ı¥ fşno3ıartósakene, lÃ¸nndúdet se[ÿ¥kğ/skrive 
+stÃ¸rreaòokker, f.eks. /íarray med bytes.
+
+JAúgodkjeTöimidlertidgûsningjısomcÿrdùr Ã©n o{ÿ
+KøsÃ¥ â€“ şle8÷ de ikke Xùfor treütil *údemonsøres. NoeHúitfiklsû blir?ßt uansett med Huffmannoppgaven. D"ügÃ¥rgüan 
+|éskrive Â«en halv byteÂ»yûfil, Dş m)ÿibóminste samle [ú 
+bits.)ühar IşelHtÿkkõvÃ¦re lurt uülage(şegvõ
+klasse forúsende Vùtrenger]öfil.
+
+  No_ëkodeeksempler
+
+//Ã…pnAÿiú:
+
+inn/ï = new DataInputSOıam(øBufferedş
+FB-Jò _navn)));
+
+utXıOutYZ/ıu tZø//Lese dUı frh}ói byte-array:'ş  ı [],ı : ùet vi lDÿr8,òint posisjon :SıdexUú for d?=úmengdeviûntallmıvilq1uífil.readFully(data,	|ÿ,Iş);\ÿL7ü Ã©nPş
+
+Vÿxıx =RMÿBnÿ(6íHar ogsÃ¥:
+
+short s,ÿS-şch,ÿcJÿCJûint ifşIn8úlong lVÿLUß//Skrive data fra byte-array til jû:
+
+utrúwrite(*î, posisjon, mengdeMıÃ©nHBúsingleü= 173YÿByÿ(
+"QõHar ogsÃ¥: `/úChar(cü c);ùShort(sş sJj÷Int(int i9ÿ XúLong(lş l9ïHente 13 bit fra ü1, 8ú2 og 4$ş3,\úfÃ¥ deqûnn i 	óbyte-array:
+
+ó[] data = newı[3]lq÷0b1101000ø11; //13s(ÿ2("û1;   ı//8'ÿ3OM"(ş//N0ùfÃ¸rste_ü fra]ó1 til data[0]'úÃ¸vrig%és maskeres bort med &
+
+-où(byte)(Hÿ&~ı111ü11);ró5 gjenvÃ¦rendwÿ1wühÃ¸yiûkifte'újerner3õs vi allereDöhar lagt i=ÿ0=ÿtaÿg/÷ikke mask-ù fordi Tÿt;ÿn<Mÿi]ü0.
+
+Eô1] = (byte)(ú>> 8);[!yñplass til 3 av Sÿ8Uü fraVÿ21ûvenstvıkifyş 56oûfordi5÷5 fÃ¸rste=şs d/ùi 
+brukS&RNşngğkke maskere vekk@XKşovrı256+ıgÃ¥Qõnn 
+i en byr÷uansett
+
+tü|= (ò)(long2 << 5);w÷5 gjenvÃ¦şdelû fra 'ütil Cş2],öhÃ¸yreskif%ùjerner 4õs vi allereEüla i8ÿ18Aö = (byte)(\ù>> 3); X"÷har plassyıe 3\û fra 4ÿ3
+Lÿ|Mà3 << 5);
+
+System.out.printf("%x ù%x\n", jş0]	ÿ1	ş2]=

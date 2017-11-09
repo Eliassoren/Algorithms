@@ -1,0 +1,13 @@
+Oving04 filter=lfs diff=lfs merge=lfs -text
+Oving05 filter=lfs diff=lfs merge=lfs -text
+Oving13 filter=lfs diff=lfs merge=lfs -text
+README.md filter=lfs diff=lfs merge=lfs -text
+Oving01 filter=lfs diff=lfs merge=lfs -text
+Oving02 filter=lfs diff=lfs merge=lfs -text
+Oving03 filter=lfs diff=lfs merge=lfs -text
+Oving07 filter=lfs diff=lfs merge=lfs -text
+Oving08 filter=lfs diff=lfs merge=lfs -text
+Oving09 filter=lfs diff=lfs merge=lfs -text
+Oving10 filter=lfs diff=lfs merge=lfs -text
+Oving11 filter=lfs diff=lfs merge=lfs -text
+Oving12 filter=lfs diff=lfs merge=lfs -text
